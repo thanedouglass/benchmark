@@ -9,3 +9,10 @@ def run_integer():
     elapsed = integer_benchmark()
     print(f"Completed in {elapsed:.2f} seconds (Reference: 100 seconds)")
     print(f"Performance score: {100 / elapsed * 100:.1f}% of reference")
+
+def run_float():
+    print("\n===== 64-bit Floating Point Benchmark =====")
+    start = time.time()
+    elapsed = float_benchmark()
+    print(f"Completed in {elapsed:.2f} seconds (Reference: 100 seconds)")
+    print(f"Performance score: {100 / elapsed * 100:.1f}% of reference")
