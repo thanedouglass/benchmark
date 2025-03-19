@@ -37,3 +37,26 @@ def run_disk_large():
     elapsed = disk_benchmark_large_block()
     print(f"Completed in {elapsed:.2f} seconds (Reference: 10 seconds)")
     print(f"Performance score: {10 / elapsed * 100:.1f}% of reference")
+
+if __name__ == "__main__":
+    print("Select a benchmark to run:")
+    print("1. 32-bit Integer Operations")
+    print("2. 64-bit Floating Point Operations")
+    print("3. Memory Operations")
+    print("4. Disk Operations (Small Blocks)")
+    print("5. Disk Operations (Large Blocks)")
+    
+    choice = input("Enter your choice (1-5): ")
+    
+    if choice == "1":
+        run_integer()
+    elif choice == "2":
+        run_float()
+    elif choice == "3":
+        run_memory()
+    elif choice == "4":
+        run_disk_small()
+    elif choice == "5":
+        run_disk_large()
+    else:
+        print("Invalid choice!")
