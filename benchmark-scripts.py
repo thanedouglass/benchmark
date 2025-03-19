@@ -23,3 +23,10 @@ def run_memory():
     elapsed = memory_benchmark()
     print(f"Completed in {elapsed:.2f} seconds (Reference: 100 seconds)")
     print(f"Performance score: {100 / elapsed * 100:.1f}% of reference")
+
+def run_disk_small():
+    print("\n===== Disk Benchmark (Small Blocks) =====")
+    start = time.time()
+    elapsed = disk_benchmark_small_block()
+    print(f"Completed in {elapsed:.2f} seconds (Reference: 250 seconds)")
+    print(f"Performance score: {250 / elapsed * 100:.1f}% of reference")
