@@ -30,3 +30,10 @@ def run_disk_small():
     elapsed = disk_benchmark_small_block()
     print(f"Completed in {elapsed:.2f} seconds (Reference: 250 seconds)")
     print(f"Performance score: {250 / elapsed * 100:.1f}% of reference")
+
+def run_disk_large():
+    print("\n===== Disk Benchmark (Large Blocks) =====")
+    start = time.time()
+    elapsed = disk_benchmark_large_block()
+    print(f"Completed in {elapsed:.2f} seconds (Reference: 10 seconds)")
+    print(f"Performance score: {10 / elapsed * 100:.1f}% of reference")
